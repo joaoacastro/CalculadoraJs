@@ -23,12 +23,24 @@ class Calculator {
   processOperation(operation) {
     //Get current and previous value
     let operationValue;
-    const previous = +this.previousOperationText.innerText;
+    const previous = +this.previousOperationText.innerText.split(" ")[0];
     const current = +this.currentOperationText.innerText;
 
     switch (operation) {
       case "+":
         operationValue = previous + current;
+        this.updateScreen(operationValue, operation, current, previous);
+        break;
+      case "-":
+        operationValue = previous - current;
+        this.updateScreen(operationValue, operation, current, previous);
+        break;
+      case "/":
+        operationValue = previous / current;
+        this.updateScreen(operationValue, operation, current, previous);
+        break;
+      case "X":
+        operationValue = previous * current;
         this.updateScreen(operationValue, operation, current, previous);
         break;
       default:
@@ -43,8 +55,6 @@ class Calculator {
     current = null,
     previous = null
   ) {
-    console.log(operationValue, operation, current, previous)
-
     if (operationValue === null) {
       this.currentOperationText.innerText += this.currentOperation;
     } else {
@@ -54,7 +64,7 @@ class Calculator {
       }
       // Add current value to previous
       this.previousOperationText.innerText = `${operationValue} ${operation}`;
-      this.currentOperationText = "";
+      this.currentOperationText.innerText = "";
     }
   }
 }
