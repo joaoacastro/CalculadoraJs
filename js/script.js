@@ -16,45 +16,52 @@ class Calculator {
       return;
     }
     this.currentOperation = digit;
-    this.updateScreen();
+    this.updateScreen = "";
   }
 
   //process all calculator operations
   processOperation(operation) {
-    //Get current and previous value
-    let operationValue;
-    const previous = +this.previousOperationText.innerText.split(" ")[0];
-    const current = +this.currentOperationText.innerText;
-
-    switch (operation) {
-      case "+":
-        operationValue = previous + current;
-        this.updateScreen(operationValue, operation, current, previous);
-        break;
-      case "-":
-        operationValue = previous - current;
-        this.updateScreen(operationValue, operation, current, previous);
-        break;
-      case "/":
-        operationValue = previous / current;
-        this.updateScreen(operationValue, operation, current, previous);
-        break;
-      case "X":
-        operationValue = previous * current;
-        this.updateScreen(operationValue, operation, current, previous);
-        break;
-      default:
+    // Check if current is empty
+    if (this.currentOperationText.innerText === "") {
+      //Change Operation
+      if (this.previousOperationText.innerText !== "") {
+        this.changeOperation(operation);
         return;
-    }
-  }
+      }
+      //Get current and previous value
+      let operationValue;
+      const previous = +this.previousOperationText.innerText.split(" ")[0];
+      const current = +this.currentOperationText.innerText;
 
-  // Change values of the calculator screen
-  updateScreen(
-    operationValue = null,
-    operation = null,
-    current = null,
-    previous = null
-  ) {
+      switch (operation) {
+        case "+":
+          operationValue = previous + current;
+          this.updateScreen(operationValue, operation, current, previous);
+          break;
+        case "-":
+          operationValue = previous - current;
+          this.updateScreen(operationValue, operation, current, previous);
+          break;
+        case "/":
+          operationValue = previous / current;
+          this.updateScreen(operationValue, operation, current, previous);
+          break;
+        case "X":
+          operationValue = previous * current;
+          this.updateScreen(operationValue, operation, current, previous);
+          break;
+        default:
+          return;
+      }
+    }
+
+    // Change values of the calculator screen
+    updateScreen(
+      (operationValue = null),
+      (operation = null),
+      (current = null),
+      (previous = null)
+    );
     if (operationValue === null) {
       this.currentOperationText.innerText += this.currentOperation;
     } else {
@@ -66,6 +73,18 @@ class Calculator {
       this.previousOperationText.innerText = `${operationValue} ${operation}`;
       this.currentOperationText.innerText = "";
     }
+  }
+
+  // Change math operation
+  changeOperation(operation) {
+    const mathOperation = ["X", "/", "+", "-"];
+
+    if (!mathOperation.includes(operation)) {
+      return;
+    }
+
+    this.previousOperationText.innerText =
+      this.previousOperationText.innerText.slice(0, -1) + operation;
   }
 }
 
