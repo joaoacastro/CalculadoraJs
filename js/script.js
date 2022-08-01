@@ -73,6 +73,7 @@ class Calculator {
       if (previous === 0) {
         operationValue = current;
       }
+
       // Add current value to previous
       this.previousOperationText.innerText = `${operationValue} ${operation}`;
       this.currentOperationText.innerText = "";
