@@ -32,6 +32,15 @@ body {
   color: #666;
 }
 
+footer{
+  color: #777;
+  bottom: 0;
+  position: fixed;
+  width: 90%;
+  text-align: right;
+  font-style: italic;
+}
+
 #header{
     display: flex;
     justify-content: space-between;
