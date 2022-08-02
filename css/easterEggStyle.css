@@ -35,7 +35,8 @@ body {
   position: absolute;
   width: 90%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #fireworks{
@@ -44,12 +45,12 @@ body {
 
 #fireworks1,
 #fireworks2 {
-  padding-right: 300px;
+  /* margin-right: 300px; */
 }
 
 #fireworks2{
   transform: rotate(180deg);
-  padding-bottom: 25em;
+  /* margin-bottom: 25em; */
 }
 
 #titleTks {
