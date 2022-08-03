@@ -26,7 +26,6 @@ body {
 #description {
   display: flex;
   justify-content: center;
-  padding: 2em;
   box-shadow: 0 2px rgba(211, 211, 211, 0.5);
   background-color: rgb(197, 197, 197);
 }
@@ -43,14 +42,8 @@ body {
   width: 200px;
 }
 
-#fireworks1,
-#fireworks2 {
-  /* margin-right: 300px; */
-}
-
 #fireworks2{
   transform: rotate(180deg);
-  /* margin-bottom: 25em; */
 }
 
 #titleTks {

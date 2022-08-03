@@ -38,7 +38,7 @@
           </li>
           <li id="a">
             <a
-              id="link"
+              id="linkX"
               href="easterEgg.html"
               target="_blank"
               rel="noreferrer"
@@ -48,14 +48,15 @@
           </li>
         </ul>
       </div>
+
       <div id="operations">
         <div id="previous-operation"></div>
         <div id="current-operation">0</div>
       </div>
       <div id="memory-buttons-container">
-        <button class="memory">M+</button>
-        <button class="memory">M-</button>
-        <button class="memory">MS</button>
+        <button class="memory" onclick="caution()">M+</button>
+        <button class="memory" onclick="caution()">M-</button>
+        <button class="memory" onclick="caution()">MS</button>
       </div>
       <div id="buttons-container">
         <button>CE</button>
@@ -74,7 +75,7 @@
         <button class="number">2</button>
         <button class="number">3</button>
         <button>+</button>
-        <button class="number">000</button>
+        <button>+/-</button>
         <button class="number">0</button>
         <button class="number">.</button>
         <button id="equal-btn">=</button>

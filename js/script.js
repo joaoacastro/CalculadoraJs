@@ -2,6 +2,10 @@ const previousOperationText = document.querySelector("#previous-operation");
 const currentOperationText = document.querySelector("#current-operation");
 const buttons = document.querySelectorAll("#buttons-container button");
 
+function caution() {
+  alert("Sorry 😢 \n Project still in development 🧐");
+}
+
 class Calculator {
   constructor(previousOperationText, currentOperationText) {
     this.previousOperationText = previousOperationText;
@@ -22,13 +26,14 @@ class Calculator {
   //process all calculator operations
   processOperation(operation) {
     // Check if current is empty
-    if (this.currentOperationText.innerText === "") {
+    if (this.currentOperationText.innerText === "" && operation !== "C") {
       //Change Operation
       if (this.previousOperationText.innerText !== "") {
         this.changeOperation(operation);
       }
       return;
     }
+
     //Get current and previous value
     let operationValue;
     const previous = +this.previousOperationText.innerText.split(" ")[0];
@@ -56,6 +61,15 @@ class Calculator {
         break;
       case "CE":
         this.processClearCurrentOperation();
+        break;
+      case "C":
+        this.processClearAllOperation();
+        break;
+      case "+/-":
+        this.processChangeSignal();
+        break;
+      case "=":
+        this.processEqualOperator();
         break;
       default:
         return;
@@ -100,10 +114,28 @@ class Calculator {
     this.currentOperationText.innerText =
       this.currentOperationText.innerText.slice(0, -1);
   }
-  
+
   //erase current operation
-  processClearCurrentOperation(){
+  processClearCurrentOperation() {
     this.currentOperationText.innerText = "";
+  }
+
+  // Clear all operations
+  processClearAllOperation() {
+    this.currentOperationText.innerText = "";
+    this.previousOperationText.innerText = "";
+  }
+
+  //Process an operation
+  processEqualOperator() {
+    const operation = previousOperationText.innerText.split(" ")[1];
+    this.processOperation(operation);
+  }
+
+  //Change the number signal
+  processChangeSignal(){
+    this.currentOperationText.innerText =
+      this.currentOperationText.innerText*-1
   }
 }
 
