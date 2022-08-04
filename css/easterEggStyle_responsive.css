@@ -35,4 +35,7 @@
     width: 80px;
     padding-top: 0;
   }
+  #contact_list:hover {
+    transform: scale(1.2);
+  }
 }
