@@ -23,7 +23,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
 #calc h3 {
@@ -32,7 +32,7 @@ body {
   color: #666;
 }
 
-footer{
+footer {
   color: #777;
   bottom: 0;
   position: fixed;
@@ -41,40 +41,44 @@ footer{
   font-style: italic;
 }
 
-#header{
-    display: flex;
-    justify-content: space-between;
+footer a:visited {
+  color: #777;
 }
 
-#shortCuts{
-    display: flex;
-    list-style: none;
+#header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#shortCuts {
+  display: flex;
+  list-style: none;
 }
 #title,
-#shortCuts #a{
-    padding: 5px;
+#shortCuts #a {
+  padding: 5px;
 }
 
-#shortCuts #a{
-    align-items: center;
+#shortCuts #a {
+  align-items: center;
 }
 
 #link,
-#linkX{
-    text-decoration: none;
-    color: #000;
-    padding:5px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 5px;
+#linkX {
+  text-decoration: none;
+  color: #000;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 5px;
 }
 
-#link:hover{
+#link:hover {
   background-color: #bababa;
 }
 
-#linkX:hover{
-  color:rgb(255, 255, 255);
+#linkX:hover {
+  color: rgb(255, 255, 255);
   background-color: rgb(255, 0, 0);
 }
 
@@ -142,12 +146,12 @@ footer{
 }
 
 #buttons-container #equal-btn {
-    /* grid-column: span 2; utilizado para ocupar duas casas no grid*/ 
-    background-color: #75a5cb;
+  /* grid-column: span 2; utilizado para ocupar duas casas no grid*/
+  background-color: #75a5cb;
 }
 
 #buttons-container #equal-btn:hover {
-    background-color: #5e85a5;
-    transition: 0.2s;
-    transform: scale(1.05);
+  background-color: #5e85a5;
+  transition: 0.2s;
+  transform: scale(1.05);
 }
