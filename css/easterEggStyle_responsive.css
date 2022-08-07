@@ -27,6 +27,11 @@
   #fireworksContainer{
     position: static;
   }
+
+  #flags{
+    padding-top: 10px;
+  }
+
   #imgEuaFlag,
   #imgBrFlag {
     width: 30px;
@@ -37,7 +42,7 @@
     margin-right: 20px;
   }
   #fireworks {
-    margin-top: -20px;
+    margin-top: -25px;
     width: 80px;
     padding-top: 0;
   }
