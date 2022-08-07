@@ -45,6 +45,19 @@ body {
   transform: rotate(180deg);
 }
 
+#flags{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+}
+
+#imgEuaFlag,
+#imgBrFlag {
+  width: 50px;
+  padding: 5px;
+}
+
 #titleTks {
   font-family: "Ubuntu", sans-serif;
   color: rgb(255, 255, 255);

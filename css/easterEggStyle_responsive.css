@@ -20,11 +20,15 @@
   #contact_list {
     padding: 10px;
   }
-  img {
+  #ico_contact_list {
     width: 30px;
   }
   #fireworksContainer{
     position: static;
+  }
+  #imgEuaFlag,
+  #imgBrFlag {
+    width: 30px;
   }
   #container{
     margin-top: -20px;
