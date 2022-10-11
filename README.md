@@ -6,7 +6,7 @@ Made together with the Institution Hora de Codar with professor Matheus Battisti
 
 <img with="400em" src="./src/img/prtsc.png">
 
-## Thanks for visiting my project!
+## Thanks for visiting my project! 😉
 You can check out other projects I've developed here on my GitHub, or contact me through the other links.
 
 <a href = "mailto:joaoaccastro@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
